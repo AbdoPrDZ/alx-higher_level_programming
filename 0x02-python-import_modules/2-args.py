@@ -9,5 +9,6 @@ if __name__ == '__main__':
             print('{} argument:'.format(1))
         else:
             print('{} arguments:'.format(argc - 1))
-        for i in range(1, argc):
-            print('{0}: {1}'.format(i, argv[i]))
+        for pos, item in enumerate(argv):
+            if not (pos == 0):
+                print('{0}: {1}'.format(pos, item))
