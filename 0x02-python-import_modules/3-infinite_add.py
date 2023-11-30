@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 if __name__ == '__main__':
+    """
+    Calculate the some of all arguments passed
+    """
     from sys import argv
 
     argc = len(argv)
