@@ -9,8 +9,7 @@ if __name__ == '__main__':
     OPERATIONS = ['+', '-', '*', '/']
 
     argc = len(argv)
-
-    if argc != 3:
+    if argc != 4:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
 
@@ -20,16 +19,7 @@ if __name__ == '__main__':
         exit(1)
 
     a = int(argv[1])
-    b = int(argv[2])
-    s = 0
+    b = int(argv[3])
+    fu = add if op == '+' else sub if op == '-' else mul if op == '*' else div
 
-    if op == '+':
-        s = a + b
-    elif op == '-':
-        s = a - b
-    elif op == '*':
-        s = a * b
-    else:
-        s = a / b
-
-    print('{0} {1} = {2}'.format(a, op, b))
+    print('{0} {1} {2} = {3}'.format(a, op, b, fu(a, b)))
