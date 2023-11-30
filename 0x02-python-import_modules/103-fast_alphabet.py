@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-from string import ascii_uppercase
-print(*map(lambda c: c, list(ascii_uppercase)), sep='')
+def put(i): return chr(i)
+print(*map(put, range(65, 91)), sep='')
