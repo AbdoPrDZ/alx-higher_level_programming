@@ -10,4 +10,4 @@ def print_matrix_integer(matrix=[[]]):
             print('{:d}'.format(row[i]), end='')
             if i < rLen - 1:
                 print(' ', end='')
-        print('$')
+        print('')
