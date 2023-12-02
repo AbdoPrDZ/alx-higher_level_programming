@@ -7,7 +7,7 @@ def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         rLen = len(row)
         for i in range(rLen):
-            print('{}'.format(row[i]), end='')
+            print('{:d}'.format(row[i]), end='')
             if i < rLen - 1:
                 print(' ', end='')
         print('$')
