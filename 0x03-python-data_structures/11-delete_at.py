@@ -7,7 +7,7 @@ def delete_at(my_list=[], idx=0):
     Return: The modified list
     """
     mLen = len(my_list)
-    if idx < 0 or idx > mLen:
+    if idx < 0 or idx >= mLen:
         return my_list
 
     del my_list[idx]
