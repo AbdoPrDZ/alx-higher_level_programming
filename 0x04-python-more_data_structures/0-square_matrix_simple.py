@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
+    """
+    square_matrix_simple - calculate square of matrix
+    @matrix: the matrix
+    Return: the square of matrix
+    """
     nMatrix = []
     i = 0
     for row in matrix:
