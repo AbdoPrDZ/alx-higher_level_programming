@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
-    """ print x elements of list of integers in safe way
+    """
+    safe_print_list_integers - print x elements of list of integers in safely
 
     Args:
         my_list (list, optional): the list. Defaults to [].
         x (int, optional): the number of elements. Defaults to 0.
 
-    Return: the number of printed elements
+    Return:
+        int: the number of printed elements
     """
     n = 0
     for i in range(x):

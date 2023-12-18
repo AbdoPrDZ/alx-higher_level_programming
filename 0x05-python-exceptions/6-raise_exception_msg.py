@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 def raise_exception_msg(message=""):
-    """rase an exception with message
+    """
+    raise_exception_msg - rase an exception with message
 
     Args:
         message (str, optional): the raise message. Defaults to "".
 
-    Raise: Error
+    Raise: NameError
     """
 
     print("{}".format(message), end="")

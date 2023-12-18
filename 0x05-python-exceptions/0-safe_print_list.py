@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    """ print x of list elements
+    """
+    safe_print_list - print x of list elements
 
     Args:
         my_list (list, optional): the list. Defaults to [].

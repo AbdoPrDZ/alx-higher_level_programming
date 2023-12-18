@@ -1,11 +1,15 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
-    """ divides element by element 2 lists.
+    """
+    list_division - divides element by element 2 lists.
 
     Args:
         my_list_1 (list<int>): the first list
         my_list_2 (list<int>): the second list
         list_length (int): the length of two lists
+
+    Return:
+        list: the result list
     """
     result_list = []
 

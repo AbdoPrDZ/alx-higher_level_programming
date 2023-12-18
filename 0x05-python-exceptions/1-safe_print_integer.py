@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 def safe_print_integer(value):
-    """ print an integer in sage way
+    """
+    safe_print_integer - print an integer in sage way
 
     Args:
         value (int): the integer
 
-    Return: True if value has been correctly printed
+    Return:
+        bool: True if value has been correctly printed
     """
     try:
         print("{:d}".format(value))
