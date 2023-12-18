@@ -16,7 +16,7 @@ def safe_print_list_integers(my_list=[], x=0):
         try:
             print("{:d}".format(el), end="")
             n += 1
-        except TypeError:
+        except Exception:
             pass
     print("")
 
