@@ -14,7 +14,7 @@ def safe_print_division(a, b):
 
     try:
         rd = a / b
-    except:
+    except Exception:
         pass
     finally:
         print('Inside result: {}'.format(rd))

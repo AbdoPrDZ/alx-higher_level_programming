@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-import sys
 def safe_function(fct, *args):
+    import sys
+
     """
     safe_function - executes a function safely
 
@@ -10,6 +11,7 @@ def safe_function(fct, *args):
     Returns:
         any: the result of the function, None on error
     """
+
     try:
         return (fct(*args))
     except Exception as error:
