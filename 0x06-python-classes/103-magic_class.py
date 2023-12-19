@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Square Class
+"""
+
+
 class MagicClass:
     """
     MagicClass - Class to store properties of circumference
