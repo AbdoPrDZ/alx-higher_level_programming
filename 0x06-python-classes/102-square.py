@@ -64,35 +64,71 @@ class Square:
     def __eq__(self, other):
         """
         __eq__ - Compare if this square is equal than the other
+
+        Args:
+            other (Square): The other square
+
+        Return:
+            bool: this square is equals the other or not
         """
         return self.area() == other.area()
 
     def __ne__(self, other):
         """
         __ne__ - Compare if this square is different than the other
+
+        Args:
+            other (Square): The other square
+
+        Return:
+            bool: this square is not equals the other or not
         """
         return self.area() != other.area()
-
-    def __lt__(self, other):
-        """
-        __lt__ - Compare if this square is less than the other
-        """
-        return self.area() < other.area()
-
-    def __le__(self, other):
-        """
-        __le__ - Compare if this square is less ot equal than the other
-        """
-        return self.area() <= other.area()
 
     def __gt__(self, other):
         """
         __gt__ - Compare if this square is greater than the other
+
+        Args:
+            other (Square): The other square
+
+        Return:
+            bool: this square is greaten than other or not
         """
         return self.area() > other.area()
 
     def __ge__(self, other):
         """
         __ge__ - Compare if this square is less than the other
+
+        Args:
+            other (Square): The other square
+
+        Return:
+            bool: this square is greaten than or equals other or not
         """
         return self.area() >= other.area()
+
+    def __lt__(self, other):
+        """
+        __lt__ - Compare if this square is less than the other
+
+        Args:
+            other (Square): The other square
+
+        Return:
+            bool: this square is less than other or not
+        """
+        return self.area() < other.area()
+
+    def __le__(self, other):
+        """
+        __le__ - Compare if this square is less ot equal than the other
+
+        Args:
+            other (Square): The other square
+
+        Return:
+            bool: this square is less than or equals other or not
+        """
+        return self.area() <= other.area()
