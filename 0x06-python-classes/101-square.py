@@ -122,6 +122,12 @@ class Square:
             print(file=sys.stdout)
 
     def __str__(self):
+        """
+        __str__ - The square string
+
+        Returns:
+            str: The square string
+        """
         _str = ""
 
         if self.size > 0:
