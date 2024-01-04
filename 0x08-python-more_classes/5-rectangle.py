@@ -114,7 +114,7 @@ class Rectangle:
         _str = ""
 
         if self.width > 0 and self.height > 0:
-            _str = (("#" * self.width) + "\n") * self.height
+            _str = ((("#" * self.width) + "\n") * self.height)[:-1]
 
         return _str
 

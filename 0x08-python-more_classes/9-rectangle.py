@@ -160,7 +160,7 @@ class Rectangle:
 
         if self.width > 0 and self.height > 0:
             row = ("{}".format(self.print_symbol) * self.width) + "\n"
-            _str = row * self.height
+            _str = (row * self.height)[:-1]
 
         return _str
 
