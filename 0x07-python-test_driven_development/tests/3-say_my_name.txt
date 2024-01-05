@@ -1,0 +1,45 @@
+# 3-say_my_name.py
+
+This module defines a function that print the full name
+``say_my_name(first_name, last_name="")``
+
+## Usage
+
+``say_my_name(...)`` prints full name with this format
+"My name is <first_name> <last_name>"
+
+::
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Abdo", "Pr")
+    My name is Abdo Pr
+
+The first name and last name can contains a spaces
+
+::
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("DZ Abdo", "Pr 47")
+    My name is DZ Abdo Pr 47
+
+## Invalidations
+
+The last name is optional, if no last name an empty string is printed
+
+::
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Abdo")
+    My name is Abdo 
+
+The first_name and last_name must be strings, otherwise
+a TypeError is raised
+
+::
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name(213, "Pr")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Abdo", ["Pr"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string

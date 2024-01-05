@@ -1,0 +1,63 @@
+# 5-text_indentation.py
+
+This module defines a text indentation function
+``text_indentation(text)``
+
+## Usage
+
+The text is printed with new two lines
+before each `.`, `:` and `?` character
+
+::
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Abdo.Pr")
+    Abdo.
+    <BLANKLINE>
+    Pr
+
+All spaces before and after the text will be removed
+
+::
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("    Abdo.Pr   ")
+    Abdo.
+    <BLANKLINE>
+    Pr
+
+The new lines are added just if there `.`, `:` and `?` characters
+
+::
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Abdo Pr")
+    Abdo Pr
+
+The original new lines are printed normally
+
+::
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Abdo.\nPr.")
+    Abdo.
+    <BLANKLINE>
+    <BLANKLINE>
+    Pr.
+    <BLANKLINE>
+
+## Invalidations
+
+The parameter `text` must be string
+otherwise a TypeError is raised
+
+::
+    >>> text_indentation(21347)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+    >>> text_indentation(["Abdo", "Pr"])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string

@@ -1,0 +1,102 @@
+# 0-add_integer.py
+
+This module defines a function that addition an integers
+``add_integer(a, b=98)``
+
+## Usage
+
+``add_integer(...)`` get the addition of two numbers
+
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(213, 47)
+    260
+
+::
+    >>> add_integer(213, -47)
+    166
+
+The function also works with floating values type
+
+::
+    >>> add_integer(213.0, 47.0)
+    260
+
+Note: that floats they are converted to int before apply the addition operation
+
+::
+    >>> add_integer(213.9, 0.47)
+    213
+
+::
+    >>> add_integer(-213.9, -0.47)
+    -213
+
+Can calculate between difference types (int and float)
+
+::
+    >>> add_integer(213.3, -47)
+    166
+
+The second argument is optional, it is 98 by default
+
+::
+    >>> add_integer(213)
+    311
+
+## Invalidations
+
+``add_integer()`` expects that both arguments are either integers or floats
+If either argument is not an integer or float, a TypeError is raised:
+
+::
+    >>> add_integer("str", 47)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+    >>> add_integer(212, "str")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+::
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+    >>> add_integer(213.47, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+If both arguments are not integers or floats, a TypeError message is only
+printed for the first argument
+
+::
+    >>> add_integer("hello", "there")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+The function will fail if infinity is provided
+
+::
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+::
+    >>> add_integer(213, float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+The function will fail if NaN number is provided
+
+::
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+::
+    >>> add_integer(213, float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
