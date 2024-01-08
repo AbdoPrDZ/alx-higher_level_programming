@@ -16,6 +16,13 @@ This module defines a class BaseGeometry
 
 ## Invalidations:
 
+area is not implemented yet
+
+::
+    >>> base.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
 integer_validator method accept just int value
 
 ::
