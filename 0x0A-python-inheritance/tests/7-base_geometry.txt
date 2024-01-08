@@ -21,17 +21,17 @@ integer_validator method accept just int value
 ::
     >>> base.integer_validator("name", "Abdo")
     Traceback (most recent call last):
-    name must be an integer
+    TypeError: name must be an integer
 
 
-integer_validator method accept just the integers that grater then 0
+integer_validator method accept just the integers that greater then 0
 
 ::
     >>> base.integer_validator("num", 0)
     Traceback (most recent call last):
-    num must be grater then 0
+    ValueError: num must be greater than 0
 
 ::
     >>> base.integer_validator("num", -47)
     Traceback (most recent call last):
-    num must be grater then 0
+    ValueError: num must be greater than 0
