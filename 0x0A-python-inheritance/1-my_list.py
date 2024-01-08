@@ -14,14 +14,4 @@ class MyList(list):
         print_sorted - print this list in sorted form
         """
 
-        sl = []
-
-        for n in self:
-            for i in range(len(sl)):
-                if n < sl[i]:
-                    sl.insert(i, n)
-                    break
-            else:
-                sl.append(n)
-
-        print(sl)
+        print(sorted(self))
