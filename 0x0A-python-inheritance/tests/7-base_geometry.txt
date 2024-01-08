@@ -1,0 +1,37 @@
+# 7-base_geometry.py
+
+This module defines a class BaseGeometry
+``base = BaseGeometry()``
+
+## Usage:
+``base = BaseGeometry()`` create a BaseGeometry object
+
+::
+    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+    >>> base = BaseGeometry()
+
+::
+    >>> base.integer_validator("number", 10)
+
+
+## Invalidations:
+
+integer_validator method accept just int value
+
+::
+    >>> base.integer_validator("name", "Abdo")
+    Traceback (most recent call last):
+    name must be an integer
+
+
+integer_validator method accept just the integers that grater then 0
+
+::
+    >>> base.integer_validator("num", 0)
+    Traceback (most recent call last):
+    num must be grater then 0
+
+::
+    >>> base.integer_validator("num", -47)
+    Traceback (most recent call last):
+    num must be grater then 0
