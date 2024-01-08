@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+2-inherits_from - This module defines inherits_from function
+"""
+
+
 def inherits_from(obj, a_class):
     """
     inherits_from - checks if object is inherited instance of a class

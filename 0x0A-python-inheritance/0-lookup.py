@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+0-lookup - This module defines lookup function
+"""
+
+
 def lookup(obj):
     """
     lookup - get object attributes and methods list
