@@ -28,25 +28,25 @@ area method doesn't receiving parameters
 ::
     >>> base.area(47)
     Traceback (most recent call last):
-    TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+    TypeError: area() takes 1 positional argument but 2 were given
 
 integer_validator method requires value parameter
 
     >>> base.integer_validator("name")
     Traceback (most recent call last):
-    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 integer_validator method requires value and name parameters in the same time
 
     >>> base.integer_validator()
     Traceback (most recent call last):
-    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 integer_validator method requires just value and name parameters in the same time no more
 
     >>> base.integer_validator("name", 213, 47)
     Traceback (most recent call last):
-    TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 integer_validator method accept just int value
 
