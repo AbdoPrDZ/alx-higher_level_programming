@@ -16,12 +16,37 @@ This module defines a class BaseGeometry
 
 ## Invalidations:
 
-area is not implemented yet
+area method is not implemented yet
 
 ::
     >>> base.area()
     Traceback (most recent call last):
     Exception: area() is not implemented
+
+area method doesn't receiving parameters
+
+::
+    >>> base.area(47)
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+
+integer_validator method requires value parameter
+
+    >>> base.integer_validator("name")
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+integer_validator method requires value and name parameters in the same time
+
+    >>> base.integer_validator()
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+integer_validator method requires just value and name parameters in the same time no more
+
+    >>> base.integer_validator("name", 213, 47)
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
 
 integer_validator method accept just int value
 
@@ -29,7 +54,6 @@ integer_validator method accept just int value
     >>> base.integer_validator("name", "Abdo")
     Traceback (most recent call last):
     TypeError: name must be an integer
-
 
 integer_validator method accept just the integers that greater then 0
 
