@@ -11,10 +11,18 @@ This module defines a class BaseGeometry
     >>> base = BaseGeometry()
 
 ::
-    >>> base.integer_validator("number", 10)
+    >>> base.integer_validator("value1", 10)
+    >>> base.integer_validator("value2", 1)
 
 
 ## Invalidations:
+
+BaseGeometry doesn't have __init__ function and no takes arguments
+
+::
+    >>> BaseGeometry(213)
+    Traceback (most recent call last):
+    TypeError: BaseGeometry() takes no arguments
 
 area method is not implemented yet
 
