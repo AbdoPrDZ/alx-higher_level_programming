@@ -27,7 +27,7 @@ class Base:
             id (int, optional): the instance id. Defaults to None.
         """
 
-        if id != None:
+        if not (id is None):
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -45,7 +45,7 @@ class Base:
             str: the json string
         """
 
-        if not list_dictionaries is None and not len(list_dictionaries) == 0:
+        if not (list_dictionaries is None or len(list_dictionaries) == 0):
             return json.dumps(list_dictionaries)
         else:
             return "[]"
@@ -96,7 +96,7 @@ class Base:
             Base: the base instance
         """
 
-        if dictionary != None and len(dictionary) != 0:
+        if not (dictionary is None) and len(dictionary) != 0:
             if cls.__name__ == "Rectangle":
                 new = cls(1, 1)
             else:

@@ -73,8 +73,10 @@ class Rectangle(Base):
             self.y = args[4] if args_len >= 5 else self.y
         else:
             self.id = kwargs["id"] if "id" in kwargs.keys() else self.id
-            self.width = kwargs["width"] if "width" in kwargs.keys() else self.width
-            self.height = kwargs["height"] if "height" in kwargs.keys() else self.height
+            if "width" in kwargs.keys():
+                self.width = kwargs["width"]
+            if "height" in kwargs.keys():
+                self.height = kwargs["height"]
             self.x = kwargs["x"] if "x" in kwargs.keys() else self.x
             self.y = kwargs["y"] if "y" in kwargs.keys() else self.y
 
@@ -114,7 +116,7 @@ class Rectangle(Base):
             value (int): the rectangle width
         """
 
-        if type(value) != int:
+        if not (type(value) is int):
             raise TypeError("width must be an integer")
         elif value <= 0:
             raise ValueError("width must be > 0")
@@ -141,7 +143,7 @@ class Rectangle(Base):
             value (int): the rectangle height
         """
 
-        if type(value) != int:
+        if not (type(value) is int):
             raise TypeError("height must be an integer")
         elif value <= 0:
             raise ValueError("height must be > 0")
@@ -168,7 +170,7 @@ class Rectangle(Base):
             value (int): the rectangle pos in x axis
         """
 
-        if type(value) != int:
+        if not (type(value) is int):
             raise TypeError("x must be an integer")
         elif value < 0:
             raise ValueError("x must be >= 0")
@@ -195,7 +197,7 @@ class Rectangle(Base):
             value (int): the rectangle pos in y axis
         """
 
-        if type(value) != int:
+        if not (type(value) is int):
             raise TypeError("y must be an integer")
         elif value < 0:
             raise ValueError("y must be >= 0")

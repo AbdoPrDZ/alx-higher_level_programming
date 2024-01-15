@@ -43,7 +43,8 @@ class Square(Rectangle):
             self.y = args[3] if args_len >= 4 else self.y
         else:
             self.id = kwargs["id"] if "id" in kwargs.keys() else self.id
-            self.size = kwargs["size"] if "size" in kwargs.keys() else self.size
+            if "size" in kwargs.keys():
+                self.size = kwargs["size"]
             self.x = kwargs["x"] if "x" in kwargs.keys() else self.x
             self.y = kwargs["y"] if "y" in kwargs.keys() else self.y
 
