@@ -2,7 +2,6 @@
 const SquareP = require('./5-square');
 
 class Square extends SquareP {
-
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
@@ -15,7 +14,6 @@ class Square extends SquareP {
       console.log(s);
     }
   }
-
 }
 
 module.exports = Square;
